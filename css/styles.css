@@ -558,7 +558,7 @@ img {
 
 .modal {
   width: 408px;
-  height: 576px;
+  height: 584px;
   padding: 72px 24px 24px 24px;
 
   position: absolute;
@@ -577,14 +577,15 @@ img {
   text-align: center;
   margin-bottom: 14px;
 }
-.modadl-form {
+.modal-form {
   font-size: 12px;
-  line-height: 1.17;
+  line-height: 1.16667;
   letter-spacing: 0.04em;
 }
 
 .modal-label {
   margin-bottom: 4px;
+  /* line-height: 1.16667; */
   color: var(--main-icon-color);
 }
 
@@ -618,6 +619,7 @@ img {
 .form-input {
   height: 40px;
   padding: 12px 12px 12px 54px;
+  margin-bottom: 8px;
 }
 .form-textarea {
   resize: none;
