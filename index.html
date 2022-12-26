@@ -303,14 +303,59 @@
                     </li>
               </ul>
             </div>
+            <form class="form-footer-subscribe">
+              <p>Subscribe</p>
+              <label>
+                <input class="mail" type="email" name="email" placeholder="E-mail" autocomplete="off">
+                <button class="subscribe-button" type="submit">Subscribe<svg width="24" height="24"><use href="./images/icons.svg#send"></use></svg></button>
+              </label>
+            </form>
           </div>
         </div>
       </footer>
+      <!-- backdrop is-hidden  -->
       <div class="backdrop is-hidden" data-modal>
         <div class="modal">
           <button type="button" class="modal-close" data-modal-close>
-            <svg class="close-icon"><use href="./images/icons.svg#close" ></use></svg>
+            <svg class="close-icon"><use href="./images/icons.svg#close"></use></svg>
           </button>
+          <p class="modal-title">Leave your contacts and we will call you back</p>
+          <form class="modadl-form" autocomplete="off">
+              <label class="modal-label">Name</label>
+            <div class="modal-wrap">
+              <input type="text" class="form-input" name="user-name" placeholder=" ">
+              <svg class="modal-icon">
+                <use href="./images/icons.svg#person"></use>
+              </svg>
+            </div>
+            <label class="modal-label">Phone</label>
+            <div class="modal-wrap">
+              <input type="tel" class="form-input" name="user-tel" placeholder=" ">
+              <svg class="modal-icon">
+                <use href="./images/icons.svg#phone"></use>
+              </svg>
+            </div>
+            <label class="modal-label">Email</label>
+            <div class="modal-wrap">
+              <input type="email" class="form-input" name="user-email" placeholder=" " autocomplete="off">
+              <svg class="modal-icon">
+                <use href="./images/icons.svg#email"></use>
+              </svg>
+            </div>
+            <label class="modal-label">Comment</label>
+            <div class="modal-wrap">
+              <textarea name="comment" class="form-textarea" placeholder="Text input"></textarea>
+            </div>
+            <div class="check">
+              <label class="check-label">
+                <input class="check-input" type="checkbox">
+                <span class="check-box"></span>
+                <span>I accept the terms and conditions of the </span>
+                <span><a href="" class="modal-link">Privacy Policy</a></span>
+              </label>
+            </div>
+            <button type="submit" class="modal-button">Send</button>
+          </form>
         </div>
 
       </div>
