@@ -13,7 +13,7 @@
   --background-white: #ffffff; /*white*/
   --button-color: #4d5ae5; /*iris*/
   --button-color-border: #e7e9fc; /*CORNFLOWER*/
-  --buttom-color-click: #404bbf; /*dark iris*/
+  --button-color-click: #404bbf; /*dark iris*/
   --main-icon-color: #8e8f99; /* LIGHT SLATE */
   --activ-icon-color: #31d0aa; /*Green*/
 
@@ -225,7 +225,7 @@ img {
 }
 
 .button-hero:active {
-  background-color: var(--buttom-color-click);
+  background-color: var(--button-color-click);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
@@ -602,6 +602,7 @@ img {
   fill: var(--main-color-title);
   width: 18px;
   height: 24px;
+  transition: fill var(--duration-time) var(--timing-function);
 }
 
 .form-input,
@@ -614,7 +615,7 @@ img {
 
   font-size: 12px;
 
-  transition: border-color var(--duration-time) var(--timing-function);
+  transition: border var(--duration-time) var(--timing-function);
 }
 .form-input {
   height: 40px;
@@ -634,6 +635,7 @@ img {
 
 .form-input:focus,
 .form-textarea:focus {
+  outline: none;
   border-color: var(--button-color);
 }
 .form-input:focus + .modal-icon {
@@ -655,7 +657,6 @@ img {
 .check-box {
   display: inline-block;
   margin-right: 8px;
-  /* box-sizing: content-box; */
 
   width: 16px;
   height: 16px;
@@ -663,22 +664,28 @@ img {
   border-radius: 2px;
   background-color: var(--background-white);
 
-  transition: background-color var(--duration-time) var(--timing-function);
+  transition: background-color var(--duration-time) var(--timing-function),
+    background-image var(--duration-time) var(--timing-function);
 }
-/* .check-icon {
+/* 
+.check-icon {
   position: absolute;
+  width: 16px;
+  height: 16px;
   top: 0;
   left: 0;
-  fill: var(--background-white);
 } */
-
 .check-input:checked + .check-box {
-  border-color: var(--button-color);
-  background-color: var(--button-color);
-  background-image: url("../images/icons.svg#check");
-  background-size: contain;
+  border-color: var(--button-color-click);
+  background-color: var(--button-color-click);
+  background-image: url("../images/icons.svg#check-on");
+  background-image: url("../images/check-on.svg");
+  background-position: 50% 50%;
   background-origin: border-box;
 }
+/* .check_input:checked + .check-icon {
+  fill: var(--background-white);
+} */
 
 .check-input:hover .check-lable {
   color: var(--button-color);
@@ -744,9 +751,9 @@ img {
 }
 
 .modal-close:active {
-  background-color: var(--buttom-color-click);
+  background-color: var(--button-color-click);
 }
-.modal-close:active > .clients-icon {
+.modal-close:active > .close-icon {
   fill: #fff;
 }
 
@@ -792,7 +799,7 @@ img {
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .button-item:active {
-  background-color: var(--buttom-color-click);
+  background-color: var(--button-color-click);
 }
 
 /* Development card list */
