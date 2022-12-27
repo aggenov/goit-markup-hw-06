@@ -711,6 +711,11 @@ img {
   cursor: pointer;
 }
 
+.modal-button:hover,
+.modal-button:focus {
+  background-color: var(--button-color-click);
+}
+
 /* Backdrop is hidden */
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0.2) rotate(180deg);
