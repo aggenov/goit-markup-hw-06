@@ -305,10 +305,14 @@
             </div>
             <form class="form-footer-subscribe">
               <p>Subscribe</p>
-              <label>
-                <input class="mail" type="email" name="email" placeholder="E-mail" autocomplete="off">
-                <button class="subscribe-button" type="submit">Subscribe<svg width="24" height="24"><use href="./images/icons.svg#send"></use></svg></button>
-              </label>
+              <div class="subscribe">
+                <label>
+                  <input class="mail" type="email" name="email" placeholder="E-mail" autocomplete="off" required>
+                </label>
+                <button class="subscribe-button" type="submit">Subscribe<svg width="24" height="24">
+                    <use href="./images/icons.svg#send"></use>
+                  </svg></button>
+              </div>
             </form>
           </div>
         </div>
@@ -345,7 +349,7 @@
               </svg>
             </div>
             <label class="modal-label">Comment</label>
-            <div class="modal-wrap">
+            <div class="modal-wrap-coment">
               <textarea name="comment" class="form-textarea" placeholder="Text input"></textarea>
             </div>
             <div class="check">

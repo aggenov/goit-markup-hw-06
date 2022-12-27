@@ -442,7 +442,7 @@ img {
 }
 
 .footer-text {
-  line-height: 1, 5;
+  line-height: 1.5;
   color: var(--button-color-border);
   max-width: 264px;
   margin-top: 16px;
@@ -453,7 +453,7 @@ img {
 
 .footer-social > .footer-text {
   margin-top: 0;
-  font-weight: 700;
+  font-weight: 400;
 }
 .footer-social > .social {
   margin-top: 16px;
@@ -483,6 +483,12 @@ img {
   background-color: var(--activ-icon-color);
 }
 
+.subscribe {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
 .form-footer-subscribe {
   margin-left: auto;
   color: var(--background-white);
@@ -490,11 +496,6 @@ img {
 
 .form-footer-subscribe p {
   margin-bottom: 16px;
-}
-
-.form-footer-subscribe label {
-  display: flex;
-  gap: 24px;
 }
 
 .form-footer-subscribe input {
@@ -517,6 +518,7 @@ img {
 
 .form-footer-subscribe input::placeholder {
   color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 0.04em;
 }
 
 .subscribe-button {
@@ -530,11 +532,17 @@ img {
 
   background: var(--button-color);
   color: var(--background-white);
-  border-color: var(--button-color);
+  border-color: transparent;
   border-radius: 4px;
   padding: 8px 24px;
   line-height: 1.5;
   letter-spacing: 0.04em;
+
+  transition: background-color var(--duration-time) var(--timing-function);
+}
+.subscribe-button:hover,
+.subscribe-button:focus {
+  background-color: var(--button-color-click);
 }
 
 .backdrop {
@@ -544,14 +552,12 @@ img {
   width: 100%;
   height: 100%;
 
-  transition: opacity var(--duration-time) var(--timing-function),
-    visibility var(--duration-time) var(--timing-function);
+  transition: opacity var(--duration-time) var(--timing-function);
 
   background-color: rgba(46, 47, 66, 0.4);
 }
 
 .backdrop.is-hidden {
-  /* visibility: hidden; */
   opacity: 0;
   pointer-events: none;
 }
@@ -585,6 +591,7 @@ img {
 
 .modal-label {
   margin-bottom: 4px;
+  display: inline-block;
   /* line-height: 1.16667; */
   color: var(--main-icon-color);
 }
@@ -594,11 +601,14 @@ img {
   margin-bottom: 8px;
 }
 
+.modal-wrap-coment {
+  margin-bottom: 16px;
+}
 .modal-icon {
   position: absolute;
   top: 50%;
-  left: 25px;
-  transform: translateY(-65%);
+  left: 19px;
+  transform: translateY(-50%);
   fill: var(--main-color-title);
   width: 18px;
   height: 24px;
@@ -611,7 +621,6 @@ img {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   height: 40px;
-  padding: 12px 12px 12px 54px;
 
   font-size: 12px;
 
@@ -619,10 +628,10 @@ img {
 }
 .form-input {
   height: 40px;
-  padding: 12px 12px 12px 54px;
-  margin-bottom: 8px;
+  padding: 12px 12px 12px 40px;
 }
 .form-textarea {
+  display: block;
   resize: none;
 
   height: 120px;
@@ -678,7 +687,6 @@ img {
 .check-input:checked + .check-box {
   border-color: var(--button-color-click);
   background-color: var(--button-color-click);
-  background-image: url("../images/icons.svg#check-on");
   background-image: url("../images/check-on.svg");
   background-position: 50% 50%;
   background-origin: border-box;
