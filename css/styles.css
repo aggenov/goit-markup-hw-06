@@ -598,7 +598,7 @@ img {
   position: absolute;
   top: 50%;
   left: 25px;
-  transform: translateY(-50%);
+  transform: translateY(-65%);
   fill: var(--main-color-title);
   width: 18px;
   height: 24px;
@@ -643,11 +643,46 @@ img {
 .form-textarea::placeholder {
   color: rgba(117, 117, 117, 0.5);
 }
-
+/* Check Box */
 .check {
   margin-bottom: 24px;
 }
+.check-lable {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.check-box {
+  display: inline-block;
+  margin-right: 8px;
+  /* box-sizing: content-box; */
 
+  width: 16px;
+  height: 16px;
+  border: 1.25px solid var(--main-color-title);
+  border-radius: 2px;
+  background-color: var(--background-white);
+
+  transition: background-color var(--duration-time) var(--timing-function);
+}
+/* .check-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  fill: var(--background-white);
+} */
+
+.check-input:checked + .check-box {
+  border-color: var(--button-color);
+  background-color: var(--button-color);
+  background-image: url("../images/icons.svg#check");
+  background-size: contain;
+  background-origin: border-box;
+}
+
+.check-input:hover .check-lable {
+  color: var(--button-color);
+}
 .modal-link {
   color: var(--button-color);
   text-decoration: underline;
