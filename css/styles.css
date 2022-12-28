@@ -582,6 +582,7 @@ img {
 .modal-title {
   text-align: center;
   margin-bottom: 14px;
+  color: var(--main-color-title);
 }
 .modal-form {
   font-size: 12px;
